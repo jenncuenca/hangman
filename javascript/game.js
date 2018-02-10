@@ -5,15 +5,15 @@ var words = ['gotham', 'alfred', 'robin', 'batmobile', 'joker', 'catwoman', 'poi
 var userWins = 0;
 var userLosses = 0;
 var userGuessesLeft= 5;
-
+var guessesMade="";
 // Computer Chooses Word
 var wordChosen = words[Math.floor(Math.random() * words.length)];
 
-//User inputs letter guesses
-
-
-
-
+//Print to HTML DOCUMENT
+document.getElementById("Wins").innerHTML="WINS: "+ userWins;
+document.getElementById("Losses").innerHTML="LOSSES: "+ userLosses;
+document.getElementById("Guesses").innerHTML="NUMBER OF GUESSES REMAINING: "+ userGuessesLeft;
+document.getElementById("GuessesMade").innerHTML="LETTERS GUESSES: "+ userGuessesLeft;
 
 
 
@@ -36,7 +36,7 @@ function chooseWord () {
 
 var blank= "";
 
-for  (var i - 0; i < 5; i++) {
+for  (var i =0; i < 5; i++) {
     blank + '_ ';
 }
 
@@ -44,7 +44,7 @@ var makeSpaces = function(spaces){
 
     var blank= "";
 
-    for  (var i - 0; i < spaces; i++) {
+    for  (var i =0; i < spaces; i++) {
     blank + '_ ';
     }
 
